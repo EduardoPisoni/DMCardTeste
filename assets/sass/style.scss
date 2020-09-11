@@ -1,0 +1,188 @@
+@import 'base/variables';
+@import 'base/functions';
+@import 'components/grids';
+
+body, main{
+  margin: 0;
+  padding: 0;
+  font-family: $rubik;
+  background-color: $white;
+}
+
+#primaryHeader{
+  height: 80px;
+  width: $width-fill;
+  margin-top: -80px;
+  padding: 0 15%;
+  background-color: $blue;
+  position: fixed;
+  color: $white;
+  user-select: none;
+  #DMCardLogoImage{
+    height: 45px;
+  }
+  #DMCardLogoTitle{
+    font-size: 22px;
+    font-weight: normal;
+    margin-left: 20px;
+    cursor: default;
+  }
+  #internAccessTitle{
+    font-size: 16px;
+    cursor: default;
+  }
+  #iconLock{
+    height: 24px;
+    width: 24px;
+    margin-left: 10px;
+  }
+}
+
+main{
+  width: $width-fill;
+  margin: 80px 0 80px 0;
+  position: initial;
+  padding: 45px 15% 0 15%;
+  #mainWelcome{
+    color: $blue;
+    #welcomeTitle{
+      font-size: 24px;
+      font-weight: bold;
+    }
+    #welcomeText{
+      font-size: 18px;
+    }
+  }
+  #mainLinks{
+    width: 100%;
+    margin-top: 30px;
+    grid-template-columns: grid-columns(4);
+    grid-row-gap: 30px;
+    .linkBox{
+      grid-column: grid-width(1);
+      height: 180px;
+      width: 250px;
+      color: $blue;
+      background-color: $white;
+      box-shadow: 0 0 10px $shadow;
+      text-align: center;
+      cursor: pointer;
+      .linkTitle{
+        font-size: 18px;
+        font-weight: bold;
+        margin: 15px 0 35px 0;
+      }
+    }
+  }
+}
+
+footer{
+  height: 150px;
+  width: 100%;
+  background-color: $white;
+}
+
+/*/  responsive  /*/
+@media screen and (max-width: 650px){
+  #primaryHeader{
+    padding: 0 10px;
+    height: 70px;
+    #DMCardLogo{
+      width: 100%;
+      justify-content: center!important;
+      #DMCardLogoTitle{
+        margin-left: 15px;
+      }
+    }
+    #internAccess{
+      display: none;
+    }
+  }
+  main{
+    padding: 25px 10% 0 10%;
+    #mainWelcome{
+      text-align: center;
+    }
+    #mainLinks{
+      grid-template-columns: auto;
+      grid-row-gap: 20px;
+      justify-content: center!important;
+      .linkBox{
+        grid-column: 1;
+        height: 170px;
+      }
+    }
+  }
+  footer{
+    height: 30px;
+  }
+}
+@media screen and (min-width: 550px) and  (max-width: 1300px){
+  main #mainLinks{
+    grid-template-columns: grid-columns(2);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    justify-content: center!important;
+  }
+  main #mainLinks .linkBox{
+    grid-column: grid-width(1);
+  }
+  #mainWelcome{
+    text-align: center;
+  }
+  footer{
+    height: 30px;
+  }
+}
+
+@media screen and (min-width: 850px) and  (max-width: 1300px){
+  main #mainLinks {
+    grid-template-columns: grid-columns(3);
+  }
+  footer{
+    height: 30px;
+  }
+}
+
+@media screen and (min-width: 1150px) and  (max-width: 1300px){
+  main{
+    padding: 45px 8% 0 8%;
+    #mainLinks {
+      grid-template-columns: grid-columns(4);
+    }
+  }
+  footer{
+    height: 30px;
+  }
+}
+
+@media (min-width: 1300px){
+  main{
+    padding: 45px 10% 0 10%;
+    #mainLinks {
+      grid-template-columns: grid-columns(4);
+    }
+  }
+}
+
+@media (min-width: 1700px){
+  main{
+    padding: 45px 12% 0 12%;
+    #mainLinks .linkBox {
+      width: 270px;
+    }
+  }
+}
+
+@media (min-width: 1900px){
+  #primaryHeader{
+    padding: 0 18%;
+  }
+  main {
+    padding: 45px 18% 0 18%;
+    #mainLinks .linkBox{
+      width: 280px;
+    }
+  }
+}
+

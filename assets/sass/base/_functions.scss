@@ -1,0 +1,12 @@
+@function grid-columns($num){
+  $result: auto;
+  @for $i from 1 to $num {
+    $result: $result + ' ' + auto;
+  }
+  @return $result;
+}
+
+@function grid-width($num){
+  $result: span + ' ' + $num;
+  @return $result;
+}

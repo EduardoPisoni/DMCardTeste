@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="assets/images/iconSite.png">
+        <title>Portal Interno | DMCard</title>
+
+        <!--  External Fonts  -->
+        <link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet">
+
+        <!--  CSS files  -->
+        <link href="assets/css/style.css" rel="stylesheet" />
+
+        <!--  JS files  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="assets/js/data.js"></script>
+        <script src="assets/js/functions.js"></script>
+    </head>
+    <body onload="loadLinks()">
+        <header id="primaryHeader" class="flex align-items-center justify-content-between">
+            <div id="DMCardLogo" class="flex align-items-center justify-content-between">
+                <img id="DMCardLogoImage" src="assets/images/logoDM.png" alt="DMCard logo">
+                <h1 id="DMCardLogoTitle"> Portal Interno DMCard </h1>
+            </div>
+            <div id="internAccess" class="flex align-items-center">
+                <div id="internAccessTitle"> Acesso interno </div>
+                <img id="iconLock" src="assets/images/iconLock.png" alt="icon lock">
+            </div>
+        </header>
+        <main>
+            <div id="mainWelcome">
+                <div id="welcomeTitle"> Olá! Seja bem-vindo ao Portal Interno DMCard. </div>
+                <div id="welcomeText" > Aqui, você encontrará as aplicações e ferramentas utilizadas pelos nossos colaboradores. </div>
+            </div>
+            <div id="mainLinks" class="grid justify-content-between">
+                <!--
+                    divs will be included here
+                -->
+            </div>
+        </main>
+        <footer></footer>
+    </body>
+</html>
